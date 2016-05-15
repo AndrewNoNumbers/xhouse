@@ -1,0 +1,735 @@
+/*-----------------------------------*\
+
+  firstToast.css (Toast modified by Andrew)
+  A Simple CSS Framework
+  =================================
+
+  Values you may want to change:
+  - .container { max-width:; }
+  - p { margin-bottom:; }
+  - html { font:; }
+
+  Remember: no framework will be as
+  good as a custom built, per-
+  project one. Toast and other
+  frameworks are best used for
+  rapid prototyping.
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+  /**
+  * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+  * Richard Clark (http://richclarkdesign.com)
+  * http://cssreset.com
+  */
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  }
+  body {
+
+  }
+  article,aside,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section {
+  display:block;
+  }
+  nav ul {
+  list-style:none;
+  }
+  blockquote, q {
+  quotes:none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  content:'';
+  content:none;
+  }
+  a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  }
+  /* change colours to suit your needs */
+  ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+  }
+  /* change colours to suit your needs */
+  mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+  }
+  del {
+  text-decoration: line-through;
+  }
+  abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+  }
+  table {
+  border-collapse:collapse;
+  border-spacing:0;
+  }
+  input, select {
+  vertical-align:middle;
+  }
+
+
+/*-----------------------------------*\
+  $GRID
+\*-----------------------------------*/
+
+  .container {
+    /* Whatever you want. They’re your oats. */
+    max-width: 95%;
+    padding-left: auto;
+    padding-right: auto;
+    /*padding: 0 30px;
+    padding: 0 1.5rem;*/
+
+    margin-top: 30px; /*default is 80px?*/
+    margin-bottom: 40px;
+    margin-left: 0px;
+  }
+
+  .grid {
+    max-width: 105%;
+  }
+
+  .unit {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+    margin-left: 0%;
+    margin-right: -.25em;
+    /* Clearfix */
+    overflow: hidden;
+    *overflow: visible;
+  }
+
+    .unit.demo {
+      background-color: #fff8eb;
+      height: 48px;
+      height: 3rem;
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
+    }
+
+  .span-grid {
+    width: 97%;
+  }
+
+  .one-of-two { width: 47%; }
+
+  .one-of-three { width: 30.36%; }
+  .two-of-three { width: 63.666666666%; }
+
+  .one-of-four { width: 22.05%; }
+  .three-of-four { width: 72%; }
+
+  .one-of-five { width: 17.07%; }
+  .two-of-five { width: 37%; }
+  .three-of-five { width: 57%; }
+  .four-of-five { width: 77%; }
+
+  @media screen and (max-width: 650px) {
+    .grid {
+      margin-left: 0;
+      max-width: none;
+    }
+
+    .unit {
+      width: auto;
+      margin-left: 0;
+      display: block;
+    }
+  }
+
+/*-----------------------------------*\
+  $TYPE
+
+  Works off the assumption of a 1.5
+  line height @ 20px. Again, change
+  as necessary.
+\*-----------------------------------*/
+
+  p, .p, ul, ol, hr, table, form, pre,
+  h1, .alpha, h2, .beta {
+    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1, .alpha {
+    font-size: 60px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+
+  }
+
+  h2, .beta {
+    font-size: 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+  }
+
+  h3, .gamma {
+    font-size: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  h4 {
+
+  }
+
+
+  hr {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-top: -1px;
+  }
+
+
+
+/*-----------------------------------*\
+  $MAIN
+\*-----------------------------------*/
+
+  html {
+    /*background: url('DGS_FallWatercolor_04.jpg') no-repeat center center fixed;*/
+    background: url('002.png');
+    /*background: #69B7FF;
+    /*background-size: cover;*/
+
+  }
+
+  .background-cover {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+
+    background: url('cloud1.jpg') no-repeat center center fixed;
+    /*filter: blur(5px);*/
+    background-size: cover;
+
+
+  }
+
+  .grid {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 50px 15px 30px 15px;
+    /*border-right: 2px solid @gray;
+    border-bottom: 2px solid @gray;*/
+
+  }
+
+
+  body {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  p {
+    margin-bottom: 1.3rem;
+  }
+
+  @main: #FFCE37;
+  @main-lighten: lighten(@main, 20%);
+  @main-fade: fade(@main, 20%);
+  @gray: #BEBEBE;
+
+  @hot: fade(@main, 30%);
+  @hot-fade80: lighten(@hot, 80%);
+  @hot-fade60: lighten(@hot, 60%);
+  @hot-fade40: lighten(@hot, 50%);
+  @hot-fade20: lighten(@hot, 20%);
+
+
+
+
+  @color1: #122912;
+  @color2: #273015;
+  @color3: #071717;
+  @color4: #0D1F1F;
+
+  header {
+
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 2px;
+
+    /*margin-bottom: 25px;*/
+
+    /*background-image: url('cloud3.jpg');*/
+    /*background-color: #FDFFEC;*/
+
+    border-radius: 5px;
+
+  }
+
+  .fullname {
+    font-family: 'Arvo', Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    letter-spacing: 0.3rem;
+    line-height: 89px;
+    font-size: 1.5rem;
+    margin-top: 22px;
+    margin-bottom: 40px;
+    text-align: left;
+
+    
+    padding: 0px 0;
+
+    /*background-color: #AEE3FC;*/
+    /*border-top: 20px solid #FCFAAE;
+    border-bottom: 20px solid #FCFAAE;*/
+  }
+
+  .byline {
+
+    font-weight: 400;
+
+    border: none;
+
+    margin: 60px 0;
+
+    color: black;
+
+    text-align: left;
+
+  }
+
+  .byline:hover {
+    /*line-height: 7rem;*/
+  }
+
+
+  .blocky-hr { 
+    width: 50px;
+    margin-bottom: 40px;
+
+    /*optional*/
+    
+    border-width: 10px;
+
+    margin-left: 0;
+
+  }
+
+
+  header, .contact-info {
+    text-align: center;
+  }
+
+
+  li {
+    margin-bottom: 3px;
+  }
+
+  
+    
+  /*==Contact info block 1 lite==*/
+
+    /**
+    .contact-info {
+      background-color: white;
+
+      border-radius: 0px;
+
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      border-bottom: 2px solid @main-lighten;
+      border-top: 1px solid @main-lighten;
+      border-right: 1px solid @main-lighten;
+      border-left: 1px solid @main-lighten;
+
+      padding: 0 40px 0 30px; 
+    }
+
+    .contact-info .unit {
+      padding: 10px 0;
+    }
+    .contact-info a {
+      padding: 3px 8px 4px 8px;
+
+      text-decoration: none;
+
+      color: @main-lighten;
+      border-color: @main-lighten;
+
+      font-size: 1rem;
+
+        transition: color 0.4s, background-color 0.4s, border-color 0.4s, transform 1.5s;
+    }
+    .contact-info a:hover {
+      color: @main;
+      border-color: @main;
+    }
+
+
+    **/
+
+  /*==Contact info block 2 gold minimal==*/ 
+
+  .contact-info {
+    /*background-color: @main;*/
+
+    border-radius: 1px;
+
+    margin-bottom: 35px;
+
+
+    /*border-bottom: 4px solid @main-lighten;*/
+
+  }
+
+  .contact-info .unit {
+    padding: 10px 0;
+  }
+  .contact-info a {
+    padding: 3px 8px 4px 8px;
+
+    text-decoration: none;
+
+    /*border: 1px solid;
+    border-radius: 20px;*/
+
+    color: gray;
+    border-color: @main-lighten;
+
+    font-size: 1rem;
+
+    /*text-shadow: 0px 1px 0px rgba(0,0,0,0.4);*/
+
+
+      transition: color 0.4s, background-color 0.4s, border-color 0.4s, text-shadow 0.4s, transform 1.5s;
+  }
+  .contact-info a:hover {
+    color: white;
+    border-color: white;
+
+    text-shadow: 0px 0px 2px rgba(255,255,255,0.8);
+    /*this is not a very good hover effect, should probably move to active and come up with a better hover effect*/
+  }
+  .contact-info a:active {
+    
+    
+
+  }
+
+  .contact-info .legend {
+    color: white;
+
+    font-weight: 400;   
+    
+  }
+
+
+  /*backup
+
+  .contact-info {
+    background-color: @gray;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .contact-info li {
+    display: inline-block;
+    margin: 6px 24px 8px 0;
+    height: 21px;
+  }
+  .contact-info li a {
+    padding: 3px 8px 4px 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: @gray;
+    color: white;
+    border: 1px solid @gray;
+
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+  }
+  .contact-info li a:hover {
+    background-color: white;
+    color: @main;
+  }
+  */
+
+
+
+
+
+
+  h2 {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.65rem;
+
+    line-height: 0.5rem;
+
+    color: @gray;
+    border-top: 10px solid @gray;
+
+    padding-top: 5px;
+
+    margin-top: 90px;
+
+    /*border-bottom: 1px solid black;
+
+    padding-bottom: 4px;*/
+
+  }
+
+  /*makes the left column headers aligned right*/
+  .left h2 {
+    text-align: right;
+    margin-right: 30px;
+
+  }
+
+
+
+  a {
+    color: @main;
+  }
+  a:hover {
+    color: @main-lighten;
+  }
+
+
+  /*a ludicrous fix for the top of the content block not aligning*/
+  #about {
+    padding-top: 5px;
+    margin-top: -4px;
+  }
+  .about-summary {
+    margin-top: -6px;
+
+  }
+
+  #main-body .three-of-four {
+    margin-top: -4px;
+  }
+
+  #main-body {
+    padding-top: 10px;
+
+    color: black;
+  }
+
+  .rightbar {
+    padding-top: 10px; /*must equal padding for main-body*/
+
+    color: @gray;
+  }
+
+  .content {
+    /*color: black;*/
+
+  }
+
+
+
+
+
+  .dates {
+    font-size: 0.7rem;
+
+    border: 0px solid;
+    border-radius: 5px;
+    padding: 4px;
+
+    background-color: @hot;
+    color: white; 
+
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+
+  }
+
+  .title {
+    color: black;
+  }
+
+  .institution {
+    color: black;
+  }
+  .location {
+    font-weight: 100;
+    color: black;
+  }
+
+
+
+  .left {
+    margin-left: 0;
+  }
+
+
+
+  .entry {
+    margin-bottom: 0rem;
+    
+    font-family: 'Lato', Helvetica, sans-serif;
+  }
+  .entry li {
+    display: inline-block;
+    margin-right: 3px;
+
+  }
+
+
+  .miniimg {
+    max-height: 23px;
+  }
+
+
+
+  /*.entypo-phone, .lmk-phone {
+    color: #00BB10;
+  }
+  .entypo-mail, .lmk-mail { 
+    color: #FFC400;
+  }
+  .entypo-twitter, .lmk-twitter:hover {
+    color: #55ACEE;
+  }
+  .entypo-linkedin-circled, .lmk-linkedin:hover {
+    color: #0976b4;
+  }
+
+
+  .contact-info li .lmk-twitter:hover {
+    color: #fff;
+    background-color: #55ACEE;
+    border-color: #55ACEE;
+  }
+  .contact-info li .lmk-linkedin:hover {
+    color: #fff;
+    background-color: #0976b4;
+    border-color: #0976b4;
+  }*/
+
+
+  #volunteer-experience .institution {
+    margin-bottom: 6px;
+  }
+
+
+
+  footer ul {
+    margin-bottom: 0;
+    color: @gray;
+    text-align: center;
+  }
+  .miniquote {
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+    padding: 30px 0;
+  }
+
+
+
+
+/*-----------------------------------*\
+  $RESPONSIVE AND OTHER MEDIA
+\*-----------------------------------*/
+
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 100%;
+  }
+
+  .left h2 {
+    text-align: left;
+  }
+
+  .fullname {
+    font-size: 1.6rem;
+  }
+  .contact-info li {
+    margin: 0 50px;
+    margin-top: 20px;
+  }
+}
+
+
+
+@media print {
+
+  /*I should really decide if the web layout is good though*/
+
+  /*make top margin less*/
+
+  html {
+    background: white;
+
+  }
+
+  body {
+    font-size: 8pt;
+  }
+
+  /*makes the contact-info border bottom less exagerrated*/
+  .contact-info {
+    border-bottom: 1px solid @main-lighten;
+  }
+
+
+  /*this gets overridden by Chrome's default print stylesheet anyway*/
+  .dates {
+    font-size: 0.7rem;
+
+    border: 0px solid;
+    border-radius: 5px;
+    padding: 4px;
+
+    background-color: black;
+    color: white; 
+
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+
+  }
+
+}
